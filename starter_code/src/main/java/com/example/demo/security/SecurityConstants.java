@@ -1,4 +1,4 @@
-package com.example.demo.controllers.security;
+package com.example.demo.security;
 
 public class SecurityConstants {
     public static final String SECRET = "oursecretkey";

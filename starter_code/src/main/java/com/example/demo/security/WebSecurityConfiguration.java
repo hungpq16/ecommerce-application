@@ -1,4 +1,4 @@
-package com.example.demo.controllers.security;
+package com.example.demo.security;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.http.HttpMethod;
@@ -16,12 +16,16 @@ import org.springframework.security.web.authentication.HttpStatusEntryPoint;
 public class WebSecurityConfiguration extends WebSecurityConfigurerAdapter {
 
     private UserDetailsServiceImpl userDetailsService;
-    private BCryptPasswordEncoder bCryptPasswordEncoder;
+    //private BCryptPasswordEncoder bCryptPasswordEncoder;
 
-    public WebSecurityConfiguration(UserDetailsServiceImpl userDetailsService,
-            BCryptPasswordEncoder bCryptPasswordEncoder) {
+    public WebSecurityConfiguration(UserDetailsServiceImpl userDetailsService) {
         this.userDetailsService = userDetailsService;
-        this.bCryptPasswordEncoder = bCryptPasswordEncoder;
+        //this.bCryptPasswordEncoder = bCryptPasswordEncoder;
+    }
+
+    @Bean
+    public BCryptPasswordEncoder bCryptPasswordEncoder(){
+        return new BCryptPasswordEncoder();
     }
 
     @Override
@@ -43,7 +47,7 @@ public class WebSecurityConfiguration extends WebSecurityConfigurerAdapter {
     @Override
     protected void configure(AuthenticationManagerBuilder auth) throws Exception {
         auth.parentAuthenticationManager(authenticationManagerBean()).userDetailsService(userDetailsService)
-                .passwordEncoder(bCryptPasswordEncoder);
+                .passwordEncoder(bCryptPasswordEncoder());
     }
 
 }

@@ -42,6 +42,13 @@ public class UserController {
 
     @PostMapping("/create")
     public ResponseEntity<User> createUser(@RequestBody CreateUserRequest createUserRequest) {
+        // In the case userName, password is not type
+        if (createUserRequest == null || createUserRequest.getUsername() == null
+                || createUserRequest.getPassword() == null || createUserRequest.getConfirmPassword() == null) {
+            log.error("[UserController][createUser]: not input full item.");
+            return ResponseEntity.badRequest().build();
+        }
+        
         // In the case password length less than 7
         if (createUserRequest.getPassword().length() < 7) {
             log.error("[UserController][createUser]: password length must be greater than 7.");

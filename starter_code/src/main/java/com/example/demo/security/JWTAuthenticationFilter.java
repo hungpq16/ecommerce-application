@@ -1,4 +1,4 @@
-package com.example.demo.controllers.security;
+package com.example.demo.security;
 
 import java.io.IOException;
 import java.util.ArrayList;
