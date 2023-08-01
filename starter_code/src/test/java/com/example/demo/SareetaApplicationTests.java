@@ -17,22 +17,22 @@ import com.example.demo.controllers.UserControllerTest;
 @SpringBootTest
 public class SareetaApplicationTests {
 
-	@Test
-	public void contextLoads() {
-	       JUnitCore junit = new JUnitCore();
-	        junit.addListener(new TextListener(System.out));
+    @Test
+    public void contextLoads() {
+           JUnitCore junit = new JUnitCore();
+            junit.addListener(new TextListener(System.out));
 
-	        Result result = junit.run(
-	                UserControllerTest.class,
-	                ItemControllerTest.class,
-	                CartControllerTest.class,
-	                OrderControllerTest.class);
+            Result result = junit.run(
+                    UserControllerTest.class,
+                    ItemControllerTest.class,
+                    CartControllerTest.class,
+                    OrderControllerTest.class);
 
-	        System.out.println("Finished. Result: Failures: " +
-	                result.getFailureCount() + ". Ignored: " +
-	                result.getIgnoreCount() + ". Tests run: " +
-	                result.getRunCount() + ". Time: " +
-	                result.getRunTime() + "ms.");
-	}
+            System.out.println("Finished. Result: Failures: " +
+                    result.getFailureCount() + ". Ignored: " +
+                    result.getIgnoreCount() + ". Tests run: " +
+                    result.getRunCount() + ". Time: " +
+                    result.getRunTime() + "ms.");
+    }
 
 }

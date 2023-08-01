@@ -46,7 +46,7 @@ public class CartControllerTest {
     public void addCartSuccess() {
         Cart cart = new Cart();
         User userTest = new User(1L, TestConstant.USERNAME, TestConstant.PASSWORD, cart);
-        Item item1 = new Item(1L, "Udacity Course", BigDecimal.valueOf(2.99), "Become a java web developer");
+        Item item1 = new Item(1L, "Round Widget", BigDecimal.valueOf(2.99), "A widget that is round");
 
         ModifyCartRequest modifyCartRequest = new ModifyCartRequest();
         modifyCartRequest.setUsername(TestConstant.USERNAME);

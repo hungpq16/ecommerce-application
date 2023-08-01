@@ -44,8 +44,8 @@ public class OrderControllerTest {
         List<Item> items = new ArrayList<>();
         BigDecimal total = new BigDecimal(0);
 
-        Item item1 = new Item(1L, "Udacity 01", BigDecimal.valueOf(5.9), "The course of Java");
-        Item item2 = new Item(2L, "Udacity 02", BigDecimal.valueOf(7.9), "The course of Javasctipt");
+        Item item1 = new Item(1L, "Round Widget", BigDecimal.valueOf(2.99), "A widget that is round");
+        Item item2 = new Item(2L, "Square Widget", BigDecimal.valueOf(1.99), "A widget that is square");
         items.add(item1);
         items.add(item2);
         total.add(item1.getPrice());
@@ -81,8 +81,8 @@ public class OrderControllerTest {
         List<Item> items = new ArrayList<>();
         BigDecimal total = new BigDecimal(0);
 
-        Item item1 = new Item(1L, "Udacity 01", BigDecimal.valueOf(5.9), "The course of Java");
-        Item item2 = new Item(2L, "Udacity 02", BigDecimal.valueOf(7.9), "The course of Javasctipt");
+        Item item1 = new Item(1L, "Round Widget", BigDecimal.valueOf(2.99), "A widget that is round");
+        Item item2 = new Item(2L, "Square Widget", BigDecimal.valueOf(1.99), "A widget that is square");
         items.add(item1);
         items.add(item2);
         total.add(item1.getPrice());

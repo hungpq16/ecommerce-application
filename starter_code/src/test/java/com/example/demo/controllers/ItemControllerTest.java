@@ -35,8 +35,8 @@ public class ItemControllerTest {
     @Test
     public void getAllItems() {
         List<Item> items = new ArrayList<>();
-        Item item1 = new Item(1L, "Udacity 01", BigDecimal.valueOf(5.9), "The course of Java");
-        Item item2 = new Item(2L, "Udacity 02", BigDecimal.valueOf(7.9), "The course of Javasctipt");
+        Item item1 = new Item(1L, "Round Widget", BigDecimal.valueOf(2.99), "A widget that is round");
+        Item item2 = new Item(2L, "Square Widget", BigDecimal.valueOf(1.99), "A widget that is square");
         items.add(item1);
         items.add(item2);
 
@@ -49,8 +49,8 @@ public class ItemControllerTest {
 
     @Test
     public void findItemSuccess() {
-        Item item1 = new Item(1L, "Udacity 01", BigDecimal.valueOf(5.9), "The course of Java");
-        Item item2 = new Item(2L, "Udacity 02", BigDecimal.valueOf(7.9), "The course of Javasctipt");
+        Item item1 = new Item(1L, "Round Widget", BigDecimal.valueOf(2.99), "A widget that is round");
+        Item item2 = new Item(2L, "Square Widget", BigDecimal.valueOf(1.99), "A widget that is square");
 
         // find by itemId = 2
         when(itemRepository.findById(2L)).thenReturn(Optional.of(item2));
@@ -60,8 +60,8 @@ public class ItemControllerTest {
         assertEquals(item2, responseID.getBody());
 
         // find by itemName exist
-        when(itemRepository.findByName("Udacity 01")).thenReturn(Arrays.asList(item1));
-        ResponseEntity<List<Item>> responseByName = itemController.getItemsByName("Udacity 01");
+        when(itemRepository.findByName("Round Widget")).thenReturn(Arrays.asList(item1));
+        ResponseEntity<List<Item>> responseByName = itemController.getItemsByName("Round Widget");
         assertNotNull(responseByName);
         assertEquals(200, responseByName.getStatusCodeValue());
         assertEquals(Arrays.asList(item1), responseByName.getBody());
@@ -77,7 +77,7 @@ public class ItemControllerTest {
         assertNull(responseID.getBody());
 
         // find by itemName exist
-        ResponseEntity<List<Item>> responseByName = itemController.getItemsByName("Udacity 05");
+        ResponseEntity<List<Item>> responseByName = itemController.getItemsByName("Triangle Widget");
         assertNotNull(responseByName);
         assertEquals(404, responseByName.getStatusCodeValue());
         assertNull(responseByName.getBody());
