@@ -34,7 +34,7 @@ public class UserController {
     private CartRepository cartRepository;
 
     @Autowired
-    private BCryptPasswordEncoder encoder;
+    private BCryptPasswordEncoder bCryptPasswordEncoder;
 
     @GetMapping("/id/{id}")
     public ResponseEntity<User> findById(@PathVariable Long id) {
@@ -69,10 +69,10 @@ public class UserController {
         }
         User user = new User();
         user.setUsername(createUserRequest.getUsername());
-        user.setPassword(encoder.encode(createUserRequest.getPassword()));
         Cart cart = new Cart();
         cartRepository.save(cart);
         user.setCart(cart);
+        user.setPassword(bCryptPasswordEncoder.encode(createUserRequest.getPassword()));
         userRepository.save(user);
         // Add log4j when register account successfully
         log.info("File [UserController#createUser]: Create username " + createUserRequest.getUsername()

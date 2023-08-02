@@ -1,0 +1,22 @@
+2023-08-02 20:17:58,779 INFO c.e.d.c.UserController [main] File [UserController#createUser]: Create username test is successfully!
+2023-08-02 20:17:59,010 ERROR c.e.d.c.UserController [main] [UserController][createUser]: password length must be greater than 7.
+2023-08-02 20:17:59,010 ERROR c.e.d.c.UserController [main] File [UserController#createUser]: password confirmed does not match password.
+2023-08-02 20:17:59,082 INFO c.e.d.c.OrderController [main] File:[OrderController#submit]: the order requests successes!
+2023-08-02 20:17:59,091 ERROR c.e.d.c.OrderController [main] File [OrderController#submit]: Username is test not found!
+2023-08-02 20:17:59,091 INFO c.e.d.c.OrderController [main] File [OrderController#submit]: The order requests failures!
+2023-08-02 20:17:59,093 INFO c.e.d.c.OrderController [main] File [OrderController#getOrdersForUser]: The get order for user requests successes!
+2023-08-02 20:17:59,094 ERROR c.e.d.c.OrderController [main] File [OrderController#getOrdersForUser]: Username is test not found!
+2023-08-02 20:17:59,094 INFO c.e.d.c.OrderController [main] File [OrderController#getOrdersForUser]: The get order for user requests failures!
+2023-08-02 20:17:59,932 INFO c.e.d.SareetaApplicationTests [main] Starting SareetaApplicationTests using Java 15.0.1 on DESKTOP-FO8QLMB with PID 20192 (started by ADMIN in C:\Users\ADMIN\Desktop\Github\Udacity\lession 4\ecommerce-application\starter_code)
+2023-08-02 20:17:59,948 DEBUG c.e.d.SareetaApplicationTests [main] Running with Spring Boot v2.7.12, Spring v5.3.27
+2023-08-02 20:17:59,949 INFO c.e.d.SareetaApplicationTests [main] No active profile set, falling back to 1 default profile: "default"
+2023-08-02 20:18:12,869 INFO c.e.d.SareetaApplicationTests [main] Started SareetaApplicationTests in 13.64 seconds (JVM running for 65.996)
+2023-08-02 20:18:13,185 INFO c.e.d.c.UserController [main] File [UserController#createUser]: Create username test is successfully!
+2023-08-02 20:18:13,188 ERROR c.e.d.c.UserController [main] [UserController][createUser]: password length must be greater than 7.
+2023-08-02 20:18:13,188 ERROR c.e.d.c.UserController [main] File [UserController#createUser]: password confirmed does not match password.
+2023-08-02 20:18:13,243 INFO c.e.d.c.OrderController [main] File:[OrderController#submit]: the order requests successes!
+2023-08-02 20:18:13,255 ERROR c.e.d.c.OrderController [main] File [OrderController#submit]: Username is test not found!
+2023-08-02 20:18:13,256 INFO c.e.d.c.OrderController [main] File [OrderController#submit]: The order requests failures!
+2023-08-02 20:18:13,257 INFO c.e.d.c.OrderController [main] File [OrderController#getOrdersForUser]: The get order for user requests successes!
+2023-08-02 20:18:13,260 ERROR c.e.d.c.OrderController [main] File [OrderController#getOrdersForUser]: Username is test not found!
+2023-08-02 20:18:13,261 INFO c.e.d.c.OrderController [main] File [OrderController#getOrdersForUser]: The get order for user requests failures!
